@@ -1,0 +1,36 @@
+Deployment YAML
+use this line of code to open YAML 
+nano nginx-deployment.yaml
+inside the GNU nano file write this code 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-220573158
+  namespace: student-220573158
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-220573158
+  template:
+    metadata:
+      labels:
+        app: nginx-220573158
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+        To save ctrl button + O , click Enter 
+        ctrl button + x to exit.
+ Apply deployment:
+
+Shell
+kubectl apply -f nginx-deployment.yaml
+
+Verify:
+
+Shell
+kubectl get deployments
+kubectl get pods
