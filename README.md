@@ -43,3 +43,6 @@ Start Minikube
 Run this code on a terminal
 minikube start --driver=docker
 
+
+conclusion 
+This project effectively showcased the implementation and administration of a single-node Kubernetes environment using Minikube on an AWS EC2 Ubuntu instance. Docker was utilized as the container platform, while Kubernetes resources were configured and managed through YAML definition files. The Nginx web application was deployed successfully, made accessible through a NodePort service, scaled according to requirements, and evaluated for Kubernetes self-healing functionality. In addition, Portainer was deployed to facilitate cluster monitoring and management through a graphical interface. All supporting screenshots contain the student number, date, and hostname to serve as originality and ownership verification evidence
