@@ -1,0 +1,31 @@
+File:
+
+Plain Text
+nginx-service.yaml
+View the file
+cat nginx-service.yaml
+Edit firl 
+nano nginx-service.yaml
+it will prompt to GNU nano file write this source of code
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: student-220573158
+
+spec:
+  selector:
+    app: nginx-220573158
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
+  Apply the service
+Shell
+kubectl apply -f nginx-service.yaml
+Validate without applying
+Shell
+kubectl apply --dry-run=client -f nginx-service.yaml
+Check the deployed service
+Shell
+kubectl get svc
