@@ -17,5 +17,29 @@ Space 30 GB
 
 Installation Steps
 Update Ubuntu
-sudo apt update
 sudo apt upgrade -y
+
+Task 2
+2.1 Install Docker
+Run this code in Shell
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+docker --version 
+2.2  Install kubectl 
+Run this code on a buntu terminal 
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
+kubectl version --client
+
+2.3 Minikube Installation
+Run this code on a buntu terminal 
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube version
+
+Start Minikube
+Run this code on a terminal
+minikube start --driver=docker
+
